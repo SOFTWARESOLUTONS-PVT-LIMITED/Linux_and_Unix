@@ -1,0 +1,68 @@
+# - system administrator (root)
+$ -user working prompt 
+
+pwd 	-current working directory
+logname 	-display current username
+clear  -it will clear the screen 
+exit 	-logout from the current user
+date  	-display date and tome
+who am i 	-displays current username,terminal number,date and time at which you logged into the system
+who 		-to display the information about all the users who have logged into the systen currently 
+              f1=login name f2=terminal name f3=date f4=time
+finger 		-it displays complete information about all the users who are logged in
+cal 	- current month calender 
+cal 2 2021  cal month yeat
+cal 2020   cal year  
+
+banner 	- it prints a message in large letters
+          banner "BCReddy Devops"
+		 
+		 
+man
+---
+on line help provided by the man command includes brief description, options and examples
+ex:- to get more information about passwd
+man ls
+man date
+
+date command
+=============
+date [option]... [+format]
+date
+date -d "2000-11-22 09:10:15"  //The -d option allows users to operate on a specific date
+date --date="09/10/1960"      // --date command to display the given date string in the format of a date. 
+                                 This command does not affect the system’s actual date and time values, and it only prints the requested date.
+
+Linux date Command Format Options
+date +"Year: %Y, Month: %m, Day: %d"
+date "+DATE: %D%nTIME: %T"
+date +"Week number: %V Year: %y"
+These are the most common formatting characters for the date command:
+
+%D – Display date as mm/dd/yy
+%Y – Year (e.g., 2020)
+%m – Month (01-12)
+%B – Long month name (e.g., November)
+%b – Short month name (e.g., Nov)
+%d – Day of month (e.g., 01)
+%j – Day of year (001-366)
+%u – Day of week (1-7)
+%A – Full weekday name (e.g., Friday)
+%a – Short weekday name (e.g., Fri)
+%H – Hour (00-23)
+%I – Hour (01-12)
+%M – Minute (00-59)
+%S – Second (00-60)
+
+
+Set or Change Date in Linux
+
+date --set="20100513 05:30"
+
+Display Past Dates
+date --date="2 year ago"
+date --date="yesterday"
+
+Display Future Dates
+date --date="next monday"
+date --date="4 day"
