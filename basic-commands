@@ -1,6 +1,7 @@
 # - system administrator (root)
 $ -user working prompt 
 
+
 pwd 	-current working directory
 logname 	-display current username
 clear  -it will clear the screen 
@@ -16,8 +17,43 @@ cal 2020   cal year
 
 banner 	- it prints a message in large letters
           banner "BCReddy Devops"
-		 
-		 
+uname 
+=====
+The command ‘uname‘ displays the information about the system.
+
+Syntax:
+uname [OPTION]
+
+uname-a option: It prints all the system information in the following order: Kernel name, network node hostname, kernel release date, kernel version, 
+                                                                             machine hardware name, hardware platform, operating system
+-s option: It prints the kernel name
+-n option: It prints the hostname of the network node(current computer)
+-r option: It prints the kernel release date.
+-v option: It prints the version of the current kernel.
+-m option: It prints the machine hardware name.
+-p option: It prints the type of the processor.
+-i option: It prints the platform of the hardware.
+-o option: It prints the name of the operating system
+
+hostname
+========
+A hostname is a name which is given to a computer and it attached to the network. Its main purpose is to uniquely identify over a network.
+Syntax :
+hostname -[option] [file]
+
+-a : This option is used to get alias name of the host system(if any). It will return an empty line if no alias name is set.
+-A : This option is used to get all FQDNs(Fully Qualified Domain Name) of the host system. It enumerates all configured addresses on all network interfaces
+-b : Used to always set a hostname. Default name is used if none specified
+-d : This option is used to get the Domain if local domains are set. It will not return anything(not even a blank line) if no local domain is set.
+-f : This option is used to get the Fully Qualified Domain Name(FQDN). It contains short hostname and DNS domain name
+-F : This option is used to set the hostname specified in a file. Can be performed by the superuser(root) only.
+     sudo hostname -F filename
+-i :This option is used to get the IP(network) addresses. This option works only if the hostname is resolvable
+-I : This option is used to get all IP(network) addresses. The option doesn’t depend on resolvability of hostname
+-s : This option is used to get the hostname in short. The short hostname is the section of hostname before the first period/dot(.).
+-V : Gives version number as output.
+
+
 man
 ---
 on line help provided by the man command includes brief description, options and examples
