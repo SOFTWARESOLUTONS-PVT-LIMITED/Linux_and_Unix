@@ -1,0 +1,71 @@
+
+every file have 8 attributes that you can see using ls -l
+
+-		rw-rw-r-- 	1 	ubuntu 		ubuntu 		0 		Oct 1 14:13 			bcreddy
+d		rwxrwxr-x 	2 	ubuntu 		ubuntu 		4096 		Oct  1 14:23 			devops
+filetype	permissions	link	user/owner	group		size(bytes)     modification(date and time) 	filename
+
+Note: Only the owner or the root can change the permissions
+
+different types of files
+
+-	ordinary file
+d	directory file
+b 	special file
+c	special character file
+L 	symbolic link file
+
+every file contains rwx permissions
+default file and directory permission
+- (file) 664
+d (directory) 775
+
+
+-	rw-	rw-	r--
+file	user	group	owner
+
+Access modes
+permissions
+
+absolute mode(r=4 w=2 x=1)
+symbolic mode ( + - =)
+
+read=r
+write=w
+execute=x
+
+u = user or owner
+g = group
+o = others
+
++ for to add the permissions
+- for to subtract permissions
+= for to assign permission
+
+
+permission		Weight
+read 			4
+write			2
+execute			1
+read and write		6
+write and excute	3
+read and execute	5
+read write excute	7
+
+changing file permission 
+
+chmod g+w filename
+chmod u+x,o+x filename
+chmod o=r,r-w filename
+
+chmod 700 filename
+chmod 777 filename
+
+
+umask
+
+unmask022
+
+changing owner of a file
+
+chown user filename
