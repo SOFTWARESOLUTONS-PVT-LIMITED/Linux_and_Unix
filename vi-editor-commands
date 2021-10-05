@@ -33,8 +33,8 @@ Ex mode
 :w  		-  Write (save)
 :wq  		-  Save and quit
 :wq!		-  Save and quit forcefully 
-:se nu	-  Sets line numbers 
-:se nonu	-  Removes line numbers 
+:se number	-  Sets line numbers 
+:se nonumber	-  Removes line numbers 
 :84  		-  The cursor goes to line 84
 1,$s/old name/new name  - Replace the word name
 
@@ -107,4 +107,38 @@ P
 :e --> opens another file with filename  ex: b.sh
 :! --> runs the command in the file  ex: :! date
 
+==============
+i – Insert at cursor (goes into insert mode)
+a – Write after cursor (goes into insert mode)
+A – Write at the end of line (goes into insert mode)
+ESC – Terminate insert mode
+u – Undo last change
+U – Undo all changes to the entire line
+o – Open a new line (goes into insert mode)
+dd – Delete line
+3dd – Delete 3 lines.
+D – Delete contents of line after the cursor
+C – Delete contents of a line after the cursor and insert new text. Press ESC key to end insertion.
+dw – Delete word
+4dw – Delete 4 words
+cw – Change word
+x – Delete character at the cursor
+r – Replace character
+R – Overwrite characters from cursor onward
+s – Substitute one character under cursor continue to insert
+S – Substitute entire line and begin to insert at the beginning of the line
+~ – Change case of individual character
 
+===============
+Moving within a file
+k – Move cursor up
+j – Move cursor down
+h – Move cursor left
+l – Move cursor right
+
+============
+Saving and Closing the file
+Shift+zz – Save the file and quit
+:w – Save the file but keep it open
+:q – Quit without saving
+:wq – Save the file and quit
