@@ -1,0 +1,29 @@
+find command    f=file d=directory
+=============
+https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
+https://www.tecmint.com/35-practical-examples-of-linux-find-command/
+find [where to start searching from]
+ [expression determines what to find] [-options] [what to find]
+syntax
+find <path> <f/d> -name "patter" -print   
+$ find ./GFG -empty  //displays empty folders   //GFG is main directory
+./GFG/demo1
+./GFG/demo3
+$ find ./GFG -name "*.txt"   //displays the txt files
+./GFG/demo2/sample.txt
+$ find ./GFG -name sample.txt -exec rm -i {} \;   //remove the file with confirmation    //exec command execute with 0 success message
+rm: remove regular file './GFG/demo2/sample.txt'? y
+find ./GFG perm 664           //display the files with 664 permissions
+find ./ -name "sit3.properties" -exec grep 'STORE' {} \;   //it will display file with inside word
+$ find ./ -type f -name "*.txt" -exec grep 'Andhra'  {} \;  
+find / -type d -name Tecmint
+find . -type f -name "*.php"
+find / -type d -perm 777 -print -exec chmod 755 {} \;
+find / -user root -name tecmint.txt  //find the files based on user
+find /home -group developer   //find the files based on group
+find /home -user tecmint -iname "*.txt"   //Find Particular Files of User
+find / -mtime 50 //Find Last 50 Days Accessed Files
+find / -mtime +50 –mtime -100 // Find Last 50-100 Days Modified Files
+find / -size +50M -size -100M   //Find Size between 50MB – 100MB
+find / -type f -size +100M -exec rm -f {} \; //Find and Delete 100MB Files
+find / -type f -name *.mp3 -size +10M -exec rm {} \; //Find Specific Files and Delete
