@@ -1,7 +1,6 @@
 find command    f=file d=directory
 =============
-https://www.geeksforgeeks.org/find-command-in-linux-with-examples/
-https://www.tecmint.com/35-practical-examples-of-linux-find-command/
+
 find [where to start searching from]
  [expression determines what to find] [-options] [what to find]
 syntax
