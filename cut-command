@@ -1,0 +1,47 @@
+we can use cut command to extract data from a file here file should be a normal file or table 
+cut uses tab as a default field delimiter but can also work with other delimiter by using -d option.
+Note: Space is not considered as delimiter in UNIX.
+to filter the words and characters of a file content of string or word or data residing inside a file 
+
+echo hello
+echo hello | cut -c2 // o/p e == c-charter
+echo godmorning|cut -c1
+g
+echo godmorning|cut -c2-5   //2-5 means range(-)
+odmo
+$ echo "hi hello good morning" | cut -c1-6
+hi hel
+cut -d" "  -f5 //remove spaces   -d =delimiter  f=fildnumber  c=characters  c=colum b=bytes
+syntax ==> cut OPTION... [FILE]...
+getnet passwd|cut -d: -f1
+-f (--fields=LIST)  a set of fields, or a range of fields. 
+-b (--bytes=LIST) -  a set of bytes, or a range of bytes.
+-c (--characters=LIST) - Select by specifying a character, a set of characters, or a range of characters.
+-d (--delimiter)Specify a delimiter that will be used instead of the default “TAB” delimiter.
+
+
+cut test.txt -f 1,3  //display field 1 to 3 range
+cut test.txt -f -4   //display 1st to 4th fild
+cut test.txt -d ':' -f 1,3 // remoing : displaying data from field 1 to 3
+echo "Lorem ipsum dolor sit amet" | cut -d ' ' -f 2
+$ echo "Lorem-ipsum:dolor@sit amet" | cut -d '-' -f 2
+ipsum:dolor@sit amet
+$ echo "Lorem-ipsum:dolor@sit amet" | cut -d ':' -f2
+dolor@sit amet
+
+To complement the selection field list use --complement option. 
+This will print only those fields that are not selected with the -f option
+cut test.txt -f 1,3 --complement  //except 1 to 3 remaining will display
+cut test.txt -f 1,3 --output-delimiter='_' //it will include -
+
+One byte is 8 bits and can represent 256 different values.
+echo 'drüberspringen' | cut -b 5,9,13
+echo 'drüberspringen' | cut -b 1-5
+-b = byte   one byte = 8 bits
+-c = character 
+cut -c [(k)-(n)/(k),(n)/(n)] filename  k=starting positon of string n=ending postion of string
+cut -c 1- state.txt  //1- means after first chartcer
+cut -c -5 state.txt  // -5 before 5 character of each 
+-f field
+If -d option is used then it considered space as a field separator or delimiter:
+cut -d " " -f 1,2 state.txt --output-delimiter='%'
